@@ -8,8 +8,8 @@
     android:background="@color/pink">
 
     <LinearLayout
-        android:layout_width="277dp"
-        android:layout_height="346dp"
+        android:layout_width="294dp"
+        android:layout_height="414dp"
         android:layout_marginTop="140dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,11 +34,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
             android:ems="10"
             android:hint="@string/register_name"
             android:inputType="text"
             android:textColor="@color/white"
-            android:backgroundTint="@color/white"
             android:textColorHint="@color/hint_color" />
 
         <EditText
@@ -46,11 +46,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
             android:ems="10"
             android:hint="@string/register_lastname"
             android:inputType="text"
             android:textColor="@color/white"
-            android:backgroundTint="@color/white"
             android:textColorHint="@color/hint_color" />
 
         <EditText
@@ -58,11 +58,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
             android:ems="10"
             android:hint="@string/register_username"
             android:inputType="text"
             android:textColor="@color/white"
-            android:backgroundTint="@color/white"
             android:textColorHint="@color/hint_color" />
 
         <EditText
@@ -70,11 +70,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
             android:ems="10"
             android:hint="@string/register_password"
             android:inputType="textPassword"
             android:textColor="@color/white"
-            android:backgroundTint="@color/white"
             android:textColorHint="@color/hint_color" />
 
         <Button
@@ -85,6 +85,15 @@
             android:backgroundTint="@color/white"
             android:text="@string/register"
             android:textColor="@color/pink" />
+
+        <TextView
+            android:id="@+id/doSignInText"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="@color/white"
+            android:text="@string/do_sign_in_text" />
+
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

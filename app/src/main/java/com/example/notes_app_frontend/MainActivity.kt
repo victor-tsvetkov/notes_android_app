@@ -1,8 +1,10 @@
 package com.example.notes_app_frontend
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.notes_app_frontend.dto.RegisterRequest
 import com.example.notes_app_frontend.services.AuthenticationService
@@ -17,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var usernameInput: EditText
     private lateinit var passwordInput: EditText
     private lateinit var buttonSignup: Button
+    private lateinit var doSignInText: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         usernameInput = findViewById(R.id.inputUsername)
         passwordInput = findViewById(R.id.inputPassword)
         buttonSignup = findViewById(R.id.buttonSignup)
+        doSignInText = findViewById(R.id.doSignInText)
 
         (applicationContext as MainApp).appComponent.inject(this)
 
@@ -38,6 +42,11 @@ class MainActivity : AppCompatActivity() {
                 authenticationService.register(registerRequest)
                 clearInputs()
             }
+        }
+
+        doSignInText.setOnClickListener {
+            val intent = Intent(baseContext, AuthenticationActivity::class.java)
+            startActivity(intent)
         }
     }
 

@@ -1,13 +1,15 @@
 package com.example.notes_app_frontend.services
 
 import android.util.Log
+import com.example.notes_app_frontend.dto.AuthenticationRequest
+import com.example.notes_app_frontend.dto.AuthenticationResponse
 import com.example.notes_app_frontend.dto.RegisterRequest
+import com.example.notes_app_frontend.services.api.AuthenticationApi
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import javax.inject.Inject
-
 
 class AuthenticationService @Inject constructor(
     private val api: AuthenticationApi
@@ -31,4 +33,9 @@ class AuthenticationService @Inject constructor(
             }
         })
     }
+
+    suspend fun authenticate(authenticationRequest: AuthenticationRequest): Response<AuthenticationResponse> {
+        return api.authenticate(authenticationRequest)
+    }
+
 }

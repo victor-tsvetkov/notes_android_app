@@ -6,4 +6,6 @@
     <string name="register_lastname">Фамилия</string>
     <string name="register_username">Имя пользователя</string>
     <string name="register_password">Пароль</string>
+    <string name="sign_in_header">Войти</string>
+    <string name="do_sign_in_text">Уже есть аккаунт? Войдите</string>
 </resources>
